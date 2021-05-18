@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="kr">
+    
+    <head>
+        <title>The Jub's Time</title>
+        <style>
+            body{
+               display: flex;
+               justify-content: center;
+               height: 100vh;
+               align-items: center;
+            }
+
+            @keyframes superSexcyCoinFlip {
+                /* from ~to 또는 구간별 로 속성을 줄수 있음 */
+                0%{
+                    transform: rotateY(0);
+                }
+                25%{
+                    transform : scale(5);
+                    border-radius: 0px;
+                }
+                50%{
+                    transform: rotateY(180deg) translateY(-100px);
+                    border-color: tomato;
+                    
+                }
+                75%{
+                    transform : scale(5);
+                    border-radius: 25x;
+                }
+                100%{
+                    transform: rotateX(0);
+                }
+            }
+             /* transform 은 box 요소를 변형 X ,오로지 해당 요소만 변환*/
+            /*transition 은 root에 있어야 하며 state 에 있으면 안됨!!!!!!!!!*/
+            img{
+                border : 1px solid black;
+                border-radius: 50%;
+                width: 200px;
+               animation: superSexcyCoinFlip 5s ease-in-out infinite;
+                
+            }
+         
+        </style>
+    </head>
+    <body>
+        <img src="img/explain.jpg"/>
+         
+    </body>
+</html>

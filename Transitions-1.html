@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="kr">
+    
+    <head>
+        <title>The Jub's Time</title>
+        <style>
+            /* transition은 state 가 없는 요소에 붙어야 함 */
+            a{
+                color: white;
+                background-color: tomato;
+                text-decoration: none;
+                padding: 3px 5px;
+                border-radius : 5px;
+                font-size: 100px;
+               /* transition: background-color 10s ease-in-out,color 5s ease-in-out; */
+               /* transition 을 주려면 state 가 없는 css에도 있어야 사용 가능 */
+               transition: all 1s ease-in-out;
+            }
+            a:hover{
+                border-radius : 35px;
+                color: tomato;
+                background-color: wheat;
+            }
+        </style>
+    </head>
+    <body>
+      <a href="#">Go home</a>
+         
+    </body>
+</html>

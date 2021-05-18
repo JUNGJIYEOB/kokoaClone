@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="kr">
+    
+    <head>
+        <title>The Jub's Time</title>
+        <style>
+            body{
+               display: flex;
+               justify-content: center;
+               height: 100vh;
+               align-items: center;
+               flex-direction: column;
+            }
+        div{
+            background-color: teal;
+            width: 200px;
+            height: 200px;
+        }
+         @media screen and (min-width:600px ) {
+             div{
+                 background-color: tomato;
+             }
+         }  
+         @media screen and (min-width:601px) and (max-width : 1200px) and (orientation:portrait){
+             div{
+                 background-color: wheat;
+             }
+         }  
+         /* 구글링 하면 종류 많음 */
+         @media screen and (min-width:1200px){
+             div{
+                 background-color: turquoise;
+             }
+         }  
+         span{
+             font-size: 36px;
+         }
+         /*화면이 가로일떄 안보임*/
+         @media screen and(orientation: landscape) {
+             span{
+                 display:none;
+             }
+         }
+        </style>
+    </head>
+    <body>
+       <div></div>
+       <span>Plz flip ur ph</span>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="kr">
+    
+    <head>
+        <title>The Jub's Time</title>
+        <style>
+            /* transform 은 box 요소를 변형 X ,오로지 해당 요소만 변환*/
+            /*transition 은 root에 있어야 하며 state 에 있으면 안됨!!!!!!!!!*/
+            img{
+                border : 1px solid black;
+                border-radius: 50%;
+                transition: transform 5s ease-in-out; 
+                
+            }
+            img:hover{
+                transform: rotateZ(90deg);
+            }
+            p{
+                  font-size:500px ;
+            }
+        </style>
+    </head>
+    <body>
+        -<img src="img/explain.jpg"/>
+        
+    </body>
+</html>0
