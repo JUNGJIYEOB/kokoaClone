@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>The Jub's Time</title>
+        <style>
+            /* 요소  요소 : 부모 자식 관계 
+                요소 + 요소 : 형제와 바로뒤에오는 형제의 관계
+                요소 > 요소 : 부모 밑에 바로 자식 관계 */
+                /* even  : 짝수 , odd : 홀수 ex)2n+1 . . . .*/
+                /*참고 사이트 https://developer.mozilla.org/ko/docs/Web/CSS/Attribute_selectors */
+            body{
+                width: 1000vh;
+               height: 50px;
+              
+
+            }
+            span{
+                background-color: tomato;
+            }
+            
+            span:nth-child(even)
+            {
+                background-color: green;
+            }
+            input {
+                border : 1px solid wheat;
+            }
+            input:required{
+                border-color: tomato;
+
+            }
+            /* 속성을 기준으로 잡고 css 변화 */
+            /* ~= : name 이라는 단어가 포함되어있다면 css 적용 */
+            input[placeholder~="name"]{
+                background-color: thistle;
+            }
+        </style>
+    </head>
+    <body>
+      <div>
+          <form>
+            
+            <input type = "text" placeholder="First name"/>
+            <input type = "text" placeholder="Last name"/>
+            
+            <input type = "text" required placeholder="passWord"/>
+
+          </form>
+      </div>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>The Jub's Time</title>
+        <style>
+         
+            body{
+                width: 1000vh;
+               height: 50px;
+              
+
+            }
+            span{
+                background-color: yellowgreen;
+                padding: 5px;
+                border-radius: 10px;
+                text-decoration: underline;
+            }
+            /* 바로 밑 자식 : >*/
+            div>span{
+              
+                text-decoration: underline;
+            }
+
+            /* p 안에 span 을 찾아 변경 (부모를 맘껏 젖ㄱ어도 됨) */
+            p span{
+                color: violet;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+       <div> 
+        <span>hello</span>
+        <p>asjhdfgasjfgbasjhfdvbasdnfv a <span>inside</span></p>
+    </div>
+
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>The Jub's Time</title>
+        <style>
+            /* 요소  요소 : 부모 자식 관계 
+                요소 + 요소 : 형제와 바로뒤에오는 형제의 관계
+                요소 > 요소 : 부모 밑에 바로 자식 관계 */
+                /* even  : 짝수 , odd : 홀수 ex)2n+1 . . . .*/
+                /*참고 사이트 https://developer.mozilla.org/ko/docs/Web/CSS/Attribute_selectors */
+            body{
+                width: 1000vh;
+               height: 50px;
+              
+
+            }
+         
+            form{
+                border: 1px solid salmon;
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+            }
+               /*focus -whithin : focust 자식을 가진 부모 상태*/
+            /* input 이 focus 되면 form 의 css 가 변화*/
+           /* form:focus-within{
+                border-color: seagreen;
+            }
+                */
+            /* form: hover  input:focus => 이렇게 조건을 여러개 걸 수도 있음*/
+            form:hover input:focus-within{
+                background-color: sandybrown;
+            }
+            /* c참고사이트 https://developer.mozilla.org/en-US/docs/Web/CSS/::selection */
+            
+            p::selection{
+                color: white;
+                background-color: yellowgreen;
+
+            }
+        </style>
+    </head>
+    <body>
+      <div>
+          <form>
+              <!--placeholder의 css 변화는 요소 :: placeho -->
+            <input type="text" name="" id="" placeholder="Name">
+            <P>sadfasdfasfasfsadf</P>
+          </form>
+      </div>
+    </body>
+</html>
