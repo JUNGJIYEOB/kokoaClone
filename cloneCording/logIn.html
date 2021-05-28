@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <!--  .. : 현재 웹페이지의 부모 폴더-->
+    <link rel="stylesheet" href="../css/styles.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title>Welcome to koko Talk </title>
+</head>
+<body>
+    <div class="status-bar">
+        <div class="status-bar__column">
+            <span>No servcie</span>
+            <!--to do : wifi icon(heroIcons 구글링-자주쓰임https://heroicons.dev/?query=bar)-->
+            <i class="fas fa-wifi"></i>
+        </div>
+
+        <div class="status-bar__column">
+            <span>18:34</span>
+        </div>
+        <div class="status-bar__column">
+            <span>56%</span>
+            <i class="fas fa-battery-half fa-lg"></i>
+            <i class="fas fa-bolt"></i>
+        </div>
+    </div>
+    <header class="welcome-header">
+        <h1 class="welcome-header__title">Welcome to Kokoa Clone</h1>
+        <p class="welcome-header__text">
+          If you have a Kokoa Account, log in with your email or phone number.
+        </p>
+      </header>
+  
+      <form action="friends.html" method="get" id="login-form">
+        <input name="userName" class="login-form__input" type="text" id="loginId" placeholder="Email or phone number"  />
+        <input name="password" class="login-form__input" type="password" placeholder="Password" />
+        <input class="login-form__btn" type="submit" value="Log In" />
+        <a class="login-form__a" href="#">Find Kokoa Account or Password</a>
+      </form>
+
+    <!--스크립트는 항상 body 닫기 직전에 있어야 함-->
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+    <script>
+       $(function(){
+          $("#login-form").submit(function(){
+            alert("1");
+          })
+       })  
+    </script>
+</body>
+</html>
