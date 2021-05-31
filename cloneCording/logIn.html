@@ -33,22 +33,32 @@
         </p>
       </header>
   
-      <form action="friends.html" method="get" id="login-form">
-        <input name="userName" class="login-form__input" type="text" id="loginId" placeholder="Email or phone number"  />
-        <input name="password" class="login-form__input" type="password" placeholder="Password" />
+      <form  method="get" id="login-form">
+        <input name="userName" id="loginId" class="login-form__input" type="text"  placeholder="Email or phone number"  />
+        <input name="password" id="password" class="login-form__input" type="password" placeholder="Password" />
         <input class="login-form__btn" type="submit" value="Log In" />
         <a class="login-form__a" href="#">Find Kokoa Account or Password</a>
       </form>
 
     <!--스크립트는 항상 body 닫기 직전에 있어야 함-->
-    <script
-      src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
     <script>
        $(function(){
+        $("#loginId").focus();
           $("#login-form").submit(function(){
-            alert("1");
+            var loginId = $("#loginId").val();
+            var password = $("#password").val();
+          
+          if(!loginId || !password){
+              alert("아이디 또는 비밀번호를 확인하세요")
+              return false;
+            }else{
+              $("#login-form").attr("action","friends.html");
+              $("##login-form").submit();
+            }
           })
+
        })  
     </script>
 </body>
