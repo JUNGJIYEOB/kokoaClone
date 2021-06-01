@@ -50,6 +50,28 @@
   justify-content: center;
   align-items: center;
   font-size: 132px;
+  /* forwards : 에니메이션 마지막 속성값 유지 */
   animation: hideSplashScreen 0.3s ease-in-out forwards;
   animation-delay: 0.3s;
+}
+
+@keyframes heartBeat {
+  0% {
+    color: white;
+    transform: none;
+  }
+  50% {
+    color: tomato;
+    transform: scale(1.5);
+  }
+  100% {
+    color: white;
+    transform: none;
+  }
+}
+
+.open-post__heart-count:hover i {
+  /*브라우저에 에니메이션 있을 거라는 것 명시 */
+  will-change: transform;
+  animation: heartBeat 1s linear infinite;
 }
